@@ -3,13 +3,14 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Automation.Testscripts.HomePageTest">
+      <class name="com.obsqura.Testscripts.ManagePageTest">
         <methods>
-          <include name="verifybackgroundColorofNewButton"/>
           <include name="initilizeBrowser"/>
+          <include name="addNewPagesintheListPage"/>
+          <include name="manageproductNewButtonColor"/>
           <include name="browserQuit"/>
         </methods>
-      </class> <!-- Automation.Testscripts.HomePageTest -->
+      </class> <!-- com.obsqura.Testscripts.ManagePageTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

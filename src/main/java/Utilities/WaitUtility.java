@@ -1,8 +1,6 @@
 package Utilities;
 
 import java.time.Duration;
-import java.util.function.Function;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;

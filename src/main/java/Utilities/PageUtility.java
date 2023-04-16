@@ -12,6 +12,11 @@ import org.openqa.selenium.support.ui.Select;
 
 public class PageUtility
 {
+	
+	public static String  getattributeelementofhref(WebElement element)
+	{
+		return element.getAttribute("href");
+	}
 		public static void clickOnElement(WebElement element)
 		{
 			element.click();
@@ -164,7 +169,7 @@ public class PageUtility
 		}
 		public void mediumDelay(int x) throws InterruptedException 
 		{
-			Thread.sleep(x);
+			
 		}
 		public void selectFuncbyindex(WebElement element, int index) 
 		{
