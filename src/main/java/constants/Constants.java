@@ -8,8 +8,7 @@ public class Constants
 	public static String CHROMEDRIVER="\\src\\main\\java\\Resources\\chromedriver.exe";
 	public static String EDGEDRIVE="\\src\\main\\java\\Resources\\msedgedriver.exe";
 	public static String FIREFOXDRIVER="\\src\\main\\java\\Resources\\geckodriver.exe"; 
-	//public static String EXCELUTILITYFILE="\\src\\main\\java\\Utilities\\ExcelUtility.java";
-	//public static String WAITUTILITYFILE="\\src\\main\\java\\Utilities\\WaitUtility.java";
+	
 	
 	
 }

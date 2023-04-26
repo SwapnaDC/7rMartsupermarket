@@ -1,4 +1,4 @@
-package Utilities;
+package utilities;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,6 +13,7 @@ import org.openqa.selenium.support.ui.Select;
 public class PageUtility
 {
 	
+
 	public static String  getattributeelementofhref(WebElement element)
 	{
 		return element.getAttribute("href");
@@ -48,6 +49,11 @@ public class PageUtility
 			return element.getCssValue(valueName);
 		}
 		
+		
+		public static void clearElement(WebElement element)
+		{
+			element.clear();
+		}
 		
 		public static WebElement enterText(WebElement element, String value) 
 		{
@@ -230,10 +236,12 @@ public class PageUtility
 		{
 			driver.switchTo().alert().accept();
 		}
-		public String alerttext(WebDriver driver) 
+		public void alerttext(WebDriver driver) 
 		{
-			return (driver.switchTo().alert().getText());
+			 driver.switchTo().alert().getText();
 		}	
+		
+		
 		public boolean getElementTextList(List<WebElement> chkList, String element) 
 		{	
 			boolean value = true;

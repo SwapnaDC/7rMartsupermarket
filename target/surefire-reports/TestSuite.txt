@@ -1,0 +1,20 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 31.156 s <<< FAILURE! - in TestSuite
+com.obsqura.Testscripts.LoginTest.verifyLoginpageValidCredentials  Time elapsed: 0.038 s  <<< FAILURE!
+org.apache.poi.openxml4j.exceptions.NotOfficeXmlFileException: No valid entries or contents found, this is not a valid OOXML (Office Open XML) file
+	at com.obsqura.Testscripts.LoginTest.verifyLoginpageValidCredentials(LoginTest.java:66)
+Caused by: java.util.zip.ZipException: Unexpected record signature: 0X622E3273
+	at com.obsqura.Testscripts.LoginTest.verifyLoginpageValidCredentials(LoginTest.java:66)
+
+com.obsqura.Testscripts.LoginTest.verifyLoginpageInValidCredentials[adminswapna, adminswapna](1)  Time elapsed: 0.04 s  <<< FAILURE!
+org.apache.poi.openxml4j.exceptions.NotOfficeXmlFileException: No valid entries or contents found, this is not a valid OOXML (Office Open XML) file
+	at com.obsqura.Testscripts.LoginTest.verifyLoginpageInValidCredentials(LoginTest.java:84)
+Caused by: java.util.zip.ZipException: Unexpected record signature: 0XE64841E8
+	at com.obsqura.Testscripts.LoginTest.verifyLoginpageInValidCredentials(LoginTest.java:84)
+
+com.obsqura.Testscripts.LoginTest.verifyLoginpageInvalidUserName[admin, adminswapna](1)  Time elapsed: 0.091 s  <<< FAILURE!
+java.io.IOException: Stream Closed
+	at com.obsqura.Testscripts.LoginTest.verifyLoginpageInvalidUserName(LoginTest.java:27)
+
