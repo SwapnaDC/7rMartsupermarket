@@ -18,11 +18,11 @@ public class HomePagePage
 	@FindBy (xpath="//p[text()='Manage Product']")WebElement manageproduct; 
 	@FindBy(xpath="//h1[text()='List Products']")WebElement listproduct;
 	@FindBy(xpath="//p[text()='Dashboard']//parent::a")WebElement dashboard;
-	@FindBy(xpath="//h4[text()='List Products']")WebElement titletext;
+	@FindBy(xpath="//li[@class='breadcrumb-item active']")WebElement gettextofpage;
 
 	public String gettextofListProduct()
 	{
-		return titletext.getText();
+		return gettextofpage.getText();
 	}
 	public void clickManageProduct()
 	{

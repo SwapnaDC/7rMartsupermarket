@@ -2,10 +2,7 @@ package com.obsqura.Testscripts;
 
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertNotEquals;
-
 import java.io.IOException;
-
-
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
@@ -23,14 +20,14 @@ public class LoginTest extends Base
 	@Test(dataProvider = "LoginProvider")
 	public void verifyloginwithInvalidUserName(String username,String password) throws IOException
 	{
-		String expectedalert=ExcelUtility.getString(4, 0, Utility.excelpath,"login");
+		String expectedalert=ExcelUtility.getString(4, 0, utilities.Utility.excelpath,"login");
 		loginpage=new LoginPage(driver);
 		loginpage.usernameText(username).passwordText(password).loginbuttonclick();
 		assertNotEquals(expectedalert,loginpage.alertmessage(),"Successfully login");		
 	}
 	public void verifyLoginWithInvalidPassword(String username,String password) throws IOException
 	{
-		String expectedalert=ExcelUtility.getString(4, 0,Utility.excelpath,"login");
+		String expectedalert=ExcelUtility.getString(4, 0,utilities.Utility.excelpath,"login");
 		loginpage=new LoginPage(driver);
 		loginpage.usernameText(username).passwordText(password).loginbuttonclick();
 		assertNotEquals(expectedalert,loginpage.alertmessage(),"Successfully login");
@@ -47,9 +44,9 @@ public class LoginTest extends Base
 	@Test(groups = "smoke")
 	public void verifyLoginwithValidUseranmeAndPassword() throws IOException
 	{
-		String expectedhomepagetext=ExcelUtility.getString(0, 0, Utility.excelpath,"login");
-		String username=ExcelUtility.getString(1, 1, Utility.excelpath,"login");
-		String password=ExcelUtility.getString(2, 1,Utility.excelpath,"login");
+		String expectedhomepagetext=ExcelUtility.getString(0, 0, utilities.Utility.excelpath,"login");
+		String username=ExcelUtility.getString(1, 1,utilities.Utility.excelpath,"login");
+		String password=ExcelUtility.getString(2, 1,utilities.Utility.excelpath,"login");
 		loginpage=new LoginPage(driver);
 		loginpage.usernameText(username).passwordText(password).loginbuttonclick();	
 		System.out.println(loginpage.getTextHomePage());
@@ -59,7 +56,7 @@ public class LoginTest extends Base
 	@Parameters({"username","password"})
 	public void verifyLoginpagewithInValidUsernameAndPassword(@Optional("adminswapna")String username,@Optional("adminswapna")String password) throws IOException
 	{
-		String expectedalert=ExcelUtility.getString(4, 0, Utility.excelpath,"login");
+		String expectedalert=ExcelUtility.getString(4, 0, utilities.Utility.excelpath,"login");
 		loginpage=new LoginPage(driver);
 		loginpage.usernameText(username).passwordText(password).loginbuttonclick();	
 		assertNotEquals(expectedalert,loginpage.alertmessage(),"Successfully login");	

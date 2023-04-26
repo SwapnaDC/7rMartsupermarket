@@ -3,8 +3,6 @@ package com.obsqura.Testscripts;
 import static org.testng.Assert.assertEquals;
 import java.io.IOException;
 
-import javax.swing.text.Utilities;
-
 import org.testng.annotations.Test;
 
 import com.obsqura.Pages.AdminUsersPage;
@@ -23,11 +21,11 @@ public class AdminUsersTest extends Base
 	@Test(retryAnalyzer = commontests.Retry.class)
 	public void addNewAdminUsersTotheAdminPage() throws IOException
 	{
-		String alert=ExcelUtility.getString(1, 0, Utility.excelpath,"adminuserpage");
+		String alert=ExcelUtility.getString(1, 0,utilities.Utility.excelpath,"adminuserpage");
 		loginpagetest=new Login(driver);
 		loginpagetest.verifyLoginwithValidUseranmeAndPassword();
 		SelectHomeCategory homecategory=new SelectHomeCategory(driver);
-		homecategory.homepageCategoryRedirectionLink(ExcelUtility.getString(0, 0,Utility.excelpath,"adminuserpage"));
+		homecategory.homepageCategoryRedirectionLink(ExcelUtility.getString(0, 0,utilities.Utility.excelpath,"adminuserpage"));
 		adminuserspage=new AdminUsersPage(driver);
 		adminuserspage.cliclOnnewButton().entervalueinUsernameField(FakerUtility.fakerUsername()).entervalueinPasswordField(FakerUtility.fakerPassword()).clickOnUsertype().cliclOnsaveButton();
 		assertEquals(alert,adminuserspage.getalertmessage(),"New user cannot added in the users list");
@@ -36,23 +34,23 @@ public class AdminUsersTest extends Base
 	@Test(retryAnalyzer = commontests.Retry.class)
 	public void deleteUsersFromtheAdminList() throws IOException
 	{
-		String alert=ExcelUtility.getString(2, 0, Utility.excelpath,"adminuserpage");
+		String alert=ExcelUtility.getString(2, 0, utilities.Utility.excelpath,"adminuserpage");
 		loginpagetest=new Login(driver);
 		loginpagetest.verifyLoginwithValidUseranmeAndPassword();
 		SelectHomeCategory homecategory=new SelectHomeCategory(driver);
-		homecategory.homepageCategoryRedirectionLink(ExcelUtility.getString(0, 0, Utility.excelpath,"adminuserpage"));
+		homecategory.homepageCategoryRedirectionLink(ExcelUtility.getString(0, 0, utilities.Utility.excelpath,"adminuserpage"));
 		adminuserspage=new AdminUsersPage(driver);
 		adminuserspage.clickOndeleteButton();
 		assertEquals(alert,adminuserspage.getalertmessage(),"user can't deleted from the users list");
 	
 	}
 	@Test(retryAnalyzer = commontests.Retry.class)
-	public void verifycancelFunctionalityWhileclickingtheDeleteButton() throws IOException
+	public void verifycancelFunctionalityofThePopUPWhileclickingtheDeleteButton() throws IOException
 	{
 		loginpagetest=new Login(driver);
 		loginpagetest.verifyLoginwithValidUseranmeAndPassword();
 		SelectHomeCategory homecategory=new SelectHomeCategory(driver);
-		homecategory.homepageCategoryRedirectionLink(ExcelUtility.getString(0, 0,Utility.excelpath,"adminuserpage"));
+		homecategory.homepageCategoryRedirectionLink(ExcelUtility.getString(0, 0,utilities.Utility.excelpath,"adminuserpage"));
 		adminuserspage=new AdminUsersPage(driver);
 		adminuserspage.clickOncancelButton();
 		
@@ -64,9 +62,10 @@ public class AdminUsersTest extends Base
 		loginpagetest=new Login(driver);
 		loginpagetest.verifyLoginwithValidUseranmeAndPassword();
 		SelectHomeCategory homecategory=new SelectHomeCategory(driver);
-		homecategory.homepageCategoryRedirectionLink(ExcelUtility.getString(0, 0,Utility.excelpath,"adminuserpage"));
+		homecategory.homepageCategoryRedirectionLink(ExcelUtility.getString(0, 0,utilities.Utility.excelpath,"adminuserpage"));
 		adminuserspage=new AdminUsersPage(driver);
 		adminuserspage.clickOnlockButton();
+		System.out.println(adminuserspage.getalertmessage());
 		
 	
 	}

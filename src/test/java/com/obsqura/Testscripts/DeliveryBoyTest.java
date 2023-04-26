@@ -24,7 +24,7 @@ public class DeliveryBoyTest extends Base
 		loginpagetest=new Login(driver);
 		loginpagetest.verifyLoginwithValidUseranmeAndPassword();
 		SelectHomeCategory homecategory=new SelectHomeCategory(driver);
-		homecategory.homepageCategoryRedirectionLink(ExcelUtility.getString(0, 0, Utility.excelpath,"deliveryboy"));
+		homecategory.homepageCategoryRedirectionLink(ExcelUtility.getString(0, 0, utilities.Utility.excelpath,"deliveryboy"));
 		deliveryboypage=new DeliveryBoyPage(driver);
 		deliveryboypage.cliclOnNewButton();
 		deliveryboypage.entervalueinNameField(FakerUtility.fakerEnterName()).entervalueinEmailField(FakerUtility.fakerEmailId()).entervalueinPhoneNoField(FakerUtility.fakerPhoneNo()).entervalueinAddressField(FakerUtility.fakerAddress()).entervalueinUsernameField(FakerUtility.fakerUsername()).entervalueinPasswordField(FakerUtility.fakerPassword());
@@ -35,11 +35,11 @@ public class DeliveryBoyTest extends Base
 	@Test(retryAnalyzer = commontests.Retry.class)
 	public void deleteDeliveryboydetailstothDeleiveryBoyPage() throws IOException
 	{
-		String alertdelete=ExcelUtility.getString(4, 0,Utility.excelpath,"deliveryboy"); 
+		String alertdelete=ExcelUtility.getString(4, 0,utilities.Utility.excelpath,"deliveryboy"); 
 		loginpagetest=new Login(driver);
 		loginpagetest.verifyLoginwithValidUseranmeAndPassword();
 		SelectHomeCategory homecategory=new SelectHomeCategory(driver);
-		homecategory.homepageCategoryRedirectionLink(ExcelUtility.getString(0, 0,Utility.excelpath,"deliveryboy"));
+		homecategory.homepageCategoryRedirectionLink(ExcelUtility.getString(0, 0,utilities.Utility.excelpath,"deliveryboy"));
 		deliveryboypage=new DeliveryBoyPage(driver);
 		deliveryboypage.cliclOnDeleteButton();
 		deliveryboypage.deletedeteils();
@@ -50,13 +50,13 @@ public class DeliveryBoyTest extends Base
 	@Test(retryAnalyzer = commontests.Retry.class)
 	public void SearchDeliveryboydetailstothDeleiveryBoyPage() throws IOException
 	{
-		String name=ExcelUtility.getString(5, 0, Utility.excelpath,"deliveryboy"); 
-		String email=ExcelUtility.getString(5, 1, Utility.excelpath,"deliveryboy"); 
-		String ph=ExcelUtility.getString(5, 2,Utility.excelpath,"deliveryboy"); 
+		String name=ExcelUtility.getString(5, 0, utilities.Utility.excelpath,"deliveryboy"); 
+		String email=ExcelUtility.getString(5, 1,utilities.Utility.excelpath,"deliveryboy"); 
+		String ph=ExcelUtility.getString(5, 2,utilities.Utility.excelpath,"deliveryboy"); 
 		loginpagetest=new Login(driver);
 		loginpagetest.verifyLoginwithValidUseranmeAndPassword();
 		SelectHomeCategory homecategory=new SelectHomeCategory(driver);
-		homecategory.homepageCategoryRedirectionLink(ExcelUtility.getString(0, 0, Utility.excelpath,"deliveryboy"));
+		homecategory.homepageCategoryRedirectionLink(ExcelUtility.getString(0, 0,utilities.Utility.excelpath,"deliveryboy"));
 		deliveryboypage=new DeliveryBoyPage(driver);
 		deliveryboypage.cliclOnSearchButton().enterNameintheSearchField(name).enteremailintheSearchField(email).enterphonenointheSearchField(ph).cliclOnSearchButtontoGettheDetails();	
 	}
@@ -66,7 +66,7 @@ public class DeliveryBoyTest extends Base
 		loginpagetest=new Login(driver);
 		loginpagetest.verifyLoginwithValidUseranmeAndPassword();
 		SelectHomeCategory homecategory=new SelectHomeCategory(driver);
-		homecategory.homepageCategoryRedirectionLink(ExcelUtility.getString(0, 0, Utility.excelpath,"deliveryboy"));
+		homecategory.homepageCategoryRedirectionLink(ExcelUtility.getString(0, 0,utilities.Utility.excelpath,"deliveryboy"));
 		deliveryboypage=new DeliveryBoyPage(driver);
 		deliveryboypage.cliclshowArrowAndGetPassword();	
 		

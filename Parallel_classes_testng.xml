@@ -13,9 +13,9 @@
 						<exclude name="showPasswordintheVerifyUsersPage"/>	
 					</methods>
    				</class>-->
-				<class name="com.obsqura.Testscripts.LoginTest">
+				<class name="com.obsqura.Testscripts.ManageSliderTest">
 						<methods>
-						<include name="addNewDeliveryboydetailstothDeleiveryBoyPage"/>
+						<include name="addnewSliderDetilstotheSliderPage"/>
 
 						
 					</methods>

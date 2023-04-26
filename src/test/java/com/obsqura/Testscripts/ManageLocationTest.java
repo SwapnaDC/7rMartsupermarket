@@ -21,12 +21,12 @@ public class ManageLocationTest extends Base
 	@Test(retryAnalyzer = commontests.Retry.class)
 	public void addnewLocationTotheManageLocationPage() throws IOException
 	{
-		String deliverychager=ExcelUtility.getNumeric(1, 0, Utility.excelpath,"managelocation");
-		String alert=ExcelUtility.getString(2, 0, Utility.excelpath,"managelocation");
+		String deliverychager=ExcelUtility.getNumeric(1, 0,utilities.Utility.excelpath,"managelocation");
+		String alert=ExcelUtility.getString(2, 0,utilities.Utility.excelpath,"managelocation");
 		loginpagetest=new Login(driver);
 		loginpagetest.verifyLoginwithValidUseranmeAndPassword();
 		SelectHomeCategory homecategory=new SelectHomeCategory(driver);
-		homecategory.homepageCategoryRedirectionLink(ExcelUtility.getString(0, 0, Utility.excelpath,"managelocation"));
+		homecategory.homepageCategoryRedirectionLink(ExcelUtility.getString(0, 0,utilities.Utility.excelpath,"managelocation"));
 		managelocationpage=new ManageLocationPage(driver);
 		managelocationpage.clickOnNewButton();
 		managelocationpage.clickOnCountry().clickOnstate().entervalueinLocationField(FakerUtility.fakerplace()).entervalueinDeliverychagerField(deliverychager).clickOnsaveButton();
@@ -38,7 +38,7 @@ public class ManageLocationTest extends Base
 		loginpagetest=new Login(driver);
 		loginpagetest.verifyLoginwithValidUseranmeAndPassword();
 		SelectHomeCategory homecategory=new SelectHomeCategory(driver);
-		homecategory.homepageCategoryRedirectionLink(ExcelUtility.getString(0, 0, Utility.excelpath,"managelocation"));
+		homecategory.homepageCategoryRedirectionLink(ExcelUtility.getString(0, 0,utilities.Utility.excelpath,"managelocation"));
 		managelocationpage=new ManageLocationPage(driver);
 		managelocationpage.clickOnSearchButton();
 		managelocationpage.clickcountry().clickstate().SearchButtonclick();

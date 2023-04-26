@@ -32,7 +32,7 @@ public class Base
 			prop=new Properties();
 			try
 			{
-				fs = new FileInputStream(System.getProperty("user.dir") +constants.Constants.CONFIGfILE);
+				fs = new FileInputStream(utilities.Utility.urlpath);
 
 			}
 			catch (Exception e) 

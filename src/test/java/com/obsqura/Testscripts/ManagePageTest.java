@@ -26,24 +26,24 @@ public class ManagePageTest extends Base
 	@Test(retryAnalyzer = commontests.Retry.class)
 	public void verifymanageproductNewButtonColorisRed() throws IOException 
 	{
-		String expectedcolor=ExcelUtility.getString(1, 1,Utility.excelpath,"managepage");
+		String expectedcolor=ExcelUtility.getString(1, 1,utilities.Utility.excelpath,"managepage");
 		managepagepage=new ManagePagePage(driver);
 		loginpagetest=new Login(driver);
 		loginpagetest.verifyLoginwithValidUseranmeAndPassword();
 		SelectHomeCategory homecategory=new SelectHomeCategory(driver);
-		homecategory.homepageCategoryRedirectionLink(ExcelUtility.getString(3, 1,Utility.excelpath,"managepage"));
+		homecategory.homepageCategoryRedirectionLink(ExcelUtility.getString(3, 1,utilities.Utility.excelpath,"managepage"));
 		assertEquals(expectedcolor,managepagepage.getbackgroundColorofNewButton(),"new button color is not same");	
 	} 
 	@Test(retryAnalyzer = commontests.Retry.class)
 	public void TocheckWhethersearchElementsisDisplayedintheListPage() throws IOException 
 	{
-		String pagetitle=ExcelUtility.getString(1, 1,Utility.excelpath,"searchbuttonpage");
-		String expectednotfoundtext=ExcelUtility.getString(3, 1,Utility.excelpath,"searchbuttonpage");
+		String pagetitle=ExcelUtility.getString(1, 1,utilities.Utility.excelpath,"searchbuttonpage");
+		String expectednotfoundtext=ExcelUtility.getString(3, 1,utilities.Utility.excelpath,"searchbuttonpage");
 		managepagepage=new ManagePagePage(driver);
 		loginpagetest=new Login(driver);
 		loginpagetest.verifyLoginwithValidUseranmeAndPassword();
 		SelectHomeCategory homecategory=new SelectHomeCategory(driver);
-		homecategory.homepageCategoryRedirectionLink(ExcelUtility.getString(3, 1,Utility.excelpath,"managepage"));
+		homecategory.homepageCategoryRedirectionLink(ExcelUtility.getString(3, 1,utilities.Utility.excelpath,"managepage"));
 		managepagepage.clickOnSearchButtontoGosearchPage().enterTitleinthetitlebox(pagetitle).clickOnSearchButtontofindPage();
 		
 		
@@ -55,14 +55,14 @@ public class ManagePageTest extends Base
 	@Test(retryAnalyzer = commontests.Retry.class)
 	public void verifaddNewPageInthePageList() throws IOException 
 	{
-		String title=ExcelUtility.getString(5, 1,Utility.excelpath,"managepage");
-		String description=ExcelUtility.getString(6, 1,Utility.excelpath,"managepage");
-		String page=ExcelUtility.getString(7, 1,Utility.excelpath,"managepage");
+		String title=ExcelUtility.getString(5, 1,utilities.Utility.excelpath,"managepage");
+		String description=ExcelUtility.getString(6, 1,utilities.Utility.excelpath,"managepage");
+		String page=ExcelUtility.getString(7, 1,utilities.Utility.excelpath,"managepage");
 		managepagepage=new ManagePagePage(driver);
 		loginpagetest=new Login(driver);
 		loginpagetest.verifyLoginwithValidUseranmeAndPassword();
 		SelectHomeCategory homecategory=new SelectHomeCategory(driver);
-		homecategory.homepageCategoryRedirectionLink(ExcelUtility.getString(3, 1,Utility.excelpath,"managepage"));
+		homecategory.homepageCategoryRedirectionLink(ExcelUtility.getString(3, 1,utilities.Utility.excelpath,"managepage"));
 		managepagepage.clickNewButton().entervalueintitleField(title).entervalueindiscriptionField(description).entervalueinpageField(page).clicksaveButton();
 		
 	} 

@@ -50,6 +50,7 @@ public class SelectDashbordCategory
 			if(PageUtility.getattributeelementofhref(moreinfocategory).equals(moreinfolinkpages))
 			{
 				WaitUtility.pageLoadWait(driver);
+				WaitUtility.waitForElementClickable(driver, moreinfocategory);
 				PageUtility.clickOnElement(moreinfocategory);
 				WaitUtility.pageLoadWait(driver);
 				break;

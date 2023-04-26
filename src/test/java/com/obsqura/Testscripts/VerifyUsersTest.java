@@ -26,7 +26,7 @@ public class VerifyUsersTest extends Base
 		loginpagetest=new Login(driver);
 		loginpagetest.verifyLoginwithValidUseranmeAndPassword();
 		SelectDashbordCategory adshboardcategory=new SelectDashbordCategory(driver);
-		adshboardcategory.selectdahsBoardCategoryLink(ExcelUtility.getString(0, 0, Utility.excelpath,"verifyusers"));
+		adshboardcategory.selectdahsBoardCategoryLink(ExcelUtility.getString(0, 0, utilities.Utility.excelpath,"verifyusers"));
 		verifyuserspage=new VerifyUsersPage(driver);
 		verifyuserspage.clickOnstatusButton();
 		System.out.println(verifyuserspage.gettextofresultnotfound());

@@ -9,7 +9,7 @@ public class Retry implements IRetryAnalyzer
 {
 
    private static final Logger LOG    = LogManager.getLogger ("Retry.class");
-   private static final int    maxTry = 1;
+   private static final int    maxTry = 0;
    private              int    count  = 0;
 
    @Override

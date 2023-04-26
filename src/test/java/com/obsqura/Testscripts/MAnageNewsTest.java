@@ -25,12 +25,12 @@ public class MAnageNewsTest extends Base
 	public void addNewNewsinformationtotheNewsPage() throws IOException 
 	
 	{
-		String news=ExcelUtility.getString(1, 0,Utility.excelpath,"managenews");
-		String alertsuccess=ExcelUtility.getString(2, 0, Utility.excelpath,"managenews");
+		String news=ExcelUtility.getString(1, 0,utilities.Utility.excelpath,"managenews");
+		String alertsuccess=ExcelUtility.getString(2, 0, utilities.Utility.excelpath,"managenews");
 		loginpagetest=new Login(driver);
 		loginpagetest.verifyLoginwithValidUseranmeAndPassword();
 		SelectDashbordCategory adshboardcategory=new SelectDashbordCategory(driver);
-		adshboardcategory.selectDashboardDropdownListCategoryLink(ExcelUtility.getString(0, 0,Utility.excelpath,"managenews"));
+		adshboardcategory.selectDashboardDropdownListCategoryLink(ExcelUtility.getString(0, 0,utilities.Utility.excelpath,"managenews"));
 		managenewspage=new ManageNewsPage(driver);
 		managenewspage.clickOnmanagecontentLink();
 		adshboardcategory.selectdashboardMenuLink(ExcelUtility.getString(0, 0, utilities.Utility.excelpath,"managenews"));

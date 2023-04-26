@@ -29,7 +29,7 @@ public class ManageProductTest extends Base
 		loginpagetest=new Login(driver);
 		loginpagetest.verifyLoginwithValidUseranmeAndPassword();
 		SelectDashbordCategory selectdashboardcategory=new SelectDashbordCategory(driver);
-		selectdashboardcategory.selectdashboardMenuLink(ExcelUtility.getString(1, 1,Utility.excelpath,"manageproduct"));
+		selectdashboardcategory.selectdashboardMenuLink(ExcelUtility.getString(1, 1,utilities.Utility.excelpath,"manageproduct"));
 		manageproductpage = new ManageProductPage(driver);
 		manageproductpage.clickmanageProduct().clickstatusYesNo();
 		//System.out.println(manageproductpage.getbackgroundcolorofstatusbuttonyesno());

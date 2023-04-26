@@ -22,11 +22,12 @@ public class AdminUsersPage
 	@FindBy(xpath="//input[@id='password']")WebElement password;
 	@FindBy(xpath="//select[@id='user_type']")WebElement usertype;
 	@FindBy(xpath="//button[@name='Create']")WebElement savebutton;
-	@FindBy(xpath="//div[contains(@class,'alert alert-success alert-dismissible')]")WebElement alert;
+	
 	@FindBy(xpath="//a[contains(@class,'btn btn-sm btn btn-danger btncss')]")WebElement deletebutton;
 	@FindBy(xpath="//div[contains(@class,'alert alert-success alert-dismissible')]")WebElement deletealert; 
 	@FindBy(xpath="//a[@role='button']")WebElement lockbutton;
 	@FindBy(xpath="//span[contains(@class,'badge bg-warning')]")WebElement statustext;
+	@FindBy(xpath="//div[@class='alert alert-success alert-dismissible']")WebElement statuschangealert;
 	
 	
 	public String getStatusText()
@@ -62,7 +63,7 @@ public class AdminUsersPage
 	public String getalertmessage()
 	{
 		WaitUtility.pageLoadWait(driver);
-		return alert.getText();
+		return statuschangealert.getText();
 	}
 	public AdminUsersPage cliclOnnewButton()
 	{

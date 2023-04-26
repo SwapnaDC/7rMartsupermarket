@@ -1,19 +1,19 @@
 package com.obsqura.Testscripts;
 
-import static org.testng.Assert.assertEquals;
+
 
 import java.io.IOException;
 
 import org.testng.annotations.Test;
 
-import com.obsqura.Pages.HomePagePage;
+
 import com.obsqura.Pages.ManageExpensePage;
-import com.obsqura.Pages.ManagePagePage;
+
 import com.obsqura.Pages.SelectDashbordCategory;
-import com.obsqura.Pages.SelectHomeCategory;
+
 
 import utilities.ExcelUtility;
-import utilities.Utility;
+
 
 public class ManageExpenseTest extends Base
 {
@@ -27,9 +27,9 @@ public class ManageExpenseTest extends Base
 		loginpagetest.verifyLoginwithValidUseranmeAndPassword();
 		manageexpensepage=new ManageExpensePage(driver);
 		SelectDashbordCategory adshboardcategory=new SelectDashbordCategory(driver);
-		adshboardcategory.selectDashboardDropdownListCategoryLink(ExcelUtility.getString(0, 0,Utility.excelpath,"manageExpense"));
+		adshboardcategory.selectDashboardDropdownListCategoryLink(ExcelUtility.getString(0, 0,utilities.Utility.excelpath,"manageExpense"));
 		manageexpensepage.clickOnmanageexpenseLink();
-		adshboardcategory.selectdashboardMenuLink(ExcelUtility.getString(0, 0, Utility.excelpath,"manageExpense"));
+		adshboardcategory.selectdashboardMenuLink(ExcelUtility.getString(0, 0,utilities.Utility.excelpath,"manageExpense"));
 		manageexpensepage.clickOnmanageexpense().clickOnshowmorearrow();
 		
 	}
@@ -41,9 +41,9 @@ public class ManageExpenseTest extends Base
 		loginpagetest.verifyLoginwithValidUseranmeAndPassword();
 		manageexpensepage=new ManageExpensePage(driver);
 		SelectDashbordCategory adshboardcategory=new SelectDashbordCategory(driver);
-		adshboardcategory.selectDashboardDropdownListCategoryLink(ExcelUtility.getString(0, 0, Utility.excelpath,"manageExpense"));
+		adshboardcategory.selectDashboardDropdownListCategoryLink(ExcelUtility.getString(0, 0,utilities.Utility.excelpath,"manageExpense"));
 		manageexpensepage.clickOnmanageexpenseLink();
-		adshboardcategory.selectdashboardMenuLink(ExcelUtility.getString(0, 0, Utility.excelpath,"manageExpense"));
+		adshboardcategory.selectdashboardMenuLink(ExcelUtility.getString(0, 0,utilities.Utility.excelpath,"manageExpense"));
 		manageexpensepage.clickOnmanageexpense().clickOndeleteButton();
 		
 		

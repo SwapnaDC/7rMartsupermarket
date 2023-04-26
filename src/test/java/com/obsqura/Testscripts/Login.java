@@ -29,9 +29,9 @@ public class Login extends Base
 	@Test
 	public void verifyLoginwithValidUseranmeAndPassword() throws IOException
 	{
-		String expectedhomepagetext=ExcelUtility.getString(0, 0, Utility.excelpath,"login");
-		String username=ExcelUtility.getString(1, 1, Utility.excelpath,"login");
-		String password=ExcelUtility.getString(2, 1, Utility.excelpath,"login");
+		String expectedhomepagetext=ExcelUtility.getString(0, 0,utilities.Utility.excelpath,"login");
+		String username=ExcelUtility.getString(1, 1,utilities.Utility.excelpath,"login");
+		String password=ExcelUtility.getString(2, 1,utilities.Utility.excelpath,"login");
 		loginpage=new LoginPage(driver);
 		loginpage.usernameText(username).passwordText(password).loginbuttonclick();	
 		assertEquals(expectedhomepagetext,loginpage.getTextHomePage(),"unable to login");
