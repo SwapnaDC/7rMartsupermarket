@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite" parallel="methods" thread-count="1">
+<listeners>
+	<listener class-name="commontests.Listeners"/>
+</listeners>
+	<parameter name="title" value="Dashboard | 7rmart supermarket"/>
+	<parameter name="color" value="rgba(52, 58, 64, 1)"/>
+
+		<test thread-count="5" name="Test">
+			<parameter name="browser" value="chrome"/>
+				<classes>
+					<class name="com.obsqura.Testscripts.PushNotificationTest">
+						<methods>
+							<include name="verifyAddNewFunctionality"/>
+							
+						</methods>
+   					</class>
+    		</classes>
+  		</test> <!-- Test -->
+</suite> <!-- Suite -->

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+<listeners>
+	<listener class-name="commontests.Listeners"/>
+</listeners>
+	<parameter name="username" value="adminswapna"/>
+	<parameter name="password" value="adminswapna"/>
+  	<test thread-count="5" name="Test">
+		<parameter name="browser" value="chrome"/>
+    		<classes>
+      			<class name="com.obsqura.Testscripts.AdminUsersTest"/>
+				<class name="com.obsqura.Testscripts.DeliveryBoyTest"/>
+				<class name="com.obsqura.Testscripts.HomePageTest"/>
+				<class name="com.obsqura.Testscripts.LoginTest"/>
+				<class name="com.obsqura.Testscripts.ManageExpenseTest"/>
+				<class name="com.obsqura.Testscripts.ManageFooterTextTest"/>
+				<class name="com.obsqura.Testscripts.ManageLocationTest"/>
+				<class name="com.obsqura.Testscripts.MAnageNewsTest"/>
+				<class name="com.obsqura.Testscripts.ManageOrdersTest"/>
+				<class name="com.obsqura.Testscripts.ManagePageTest"/>
+				<class name="com.obsqura.Testscripts.ManagePaymentTest"/>
+				<class name="com.obsqura.Testscripts.PushNotificationTest"/>
+				<class name="com.obsqura.Testscripts.ManageContactTest"/>
+				<class name="com.obsqura.Testscripts.MobileSliderTest"/>
+				<class name="com.obsqura.Testscripts.ManageSliderTest"/>
+    		</classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
